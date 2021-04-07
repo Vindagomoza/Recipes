@@ -1,0 +1,51 @@
+body{
+    background-image:url("/img/freshly-cut-meat.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+H1{
+    text-align: center;
+    font-style: normal;
+    color: whitesmoke;
+}
+.jumbotron_text-center{
+    background-color: rgba(255,255,255,0.5);
+    display: block;
+    border: 2px solid black;
+    padding: 20px;
+    text-align: left;
+    font-style: oblique;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+}
+form{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.button1{
+    animation:bouncy 5s infinite linear;
+    position:relative;
+    }
+@keyframes bouncy {
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
+    }

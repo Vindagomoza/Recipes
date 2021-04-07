@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+  <title>My Recipes</title>
+</head>
+<h1 class="display-3"><%= rec.title %></h1> 
+<body>
+    
+<div class="jumbotron_text-center">
+    
+        <i class="fas fa-key fa-6x"></i>    
+        <table>
+            <tr>
+                <td>        
+                    
+                    <strong> Ingredients:</strong>
+                    <ul>
+                        <% ing.forEach(function(ing) { %>
+                            <li>
+                                <strong><%= ing.name %></strong>
+                                <%= ing.amount.toFixed(2) %>
+                                <%= ing.unit %>
+                            </li>
+                        <% }); %>
+                    </ul>
+                    
+                </td>
+
+            </tr>
+        </table>
+        <h2>Summary:</h2> 
+         <%- rec.summary -%>
+        <h2>Instructions:</h2> 
+        <%- rec.instructions -%>
+        <form class="form" action="/peek" method="POST">
+            <% if(clk==true){ %> 
+            <p><img id="pic" src="<%= rec.image %>" width="250" height="150"  ></p >
+            <% }else{ %>
+            <button id="show" class="button1 bouncy" >show image</button>
+            <% } %>
+        </form>
+</div>
+</body>
+</html>
